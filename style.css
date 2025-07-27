@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box {
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.chat-message {
+    display: flex; /* 아이콘과 텍스트를 나란히 배치 */
+    align-items: flex-start; /* 아이템을 상단에 정렬 */
+    margin-bottom: 10px;
+}
+
+.chat-message.user {
+    justify-content: flex-end; /* 사용자 메시지를 오른쪽으로 정렬 */
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 원형 프로필 */
+    background-color: #eee;
+    background-image: url('icon.png'); /* 프로필 이미지 경로 */
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px; /* 아이콘과 말풍선 사이 간격 */
+    flex-shrink: 0; /* 아이콘 크기 고정 */
+}
+
+.chat-message.user .profile-icon {
+    order: 1; /* 사용자 아이콘을 말풍선 뒤로 */
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.chat-message p {
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 70%; /* 말풍선 최대 너비 */
+    word-wrap: break-word; /* 긴 단어 줄바꿈 */
+}
+
+.chat-message.bot p {
+    background-color: #f2f2f2;
+}
+
+.chat-message.user p {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.chat-input {
+    display: flex;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
